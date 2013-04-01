@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/free_rs_deals"
+    android:gravity="bottom" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <com.facebook.LoginButton
+            android:id="@+id/facebook"
+            android:layout_height="42dp"
+            android:layout_width="280dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/or" />
+
+        <Button
+            android:id="@+id/login_email"
+            android:layout_width="280dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sign_in_email" />
+
+        <Button
+            android:id="@+id/signup_email"
+            android:layout_width="280dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sign_up_email" />
+    </LinearLayout>
+
+</RelativeLayout>

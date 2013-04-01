@@ -1,0 +1,299 @@
+<!--  ============================================================ -->
+<!--         		TangoTab application Configuration             -->  
+<!--  ============================================================ -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tangotab"
+    android:versionCode="7"
+    android:versionName="1.6" >
+	
+    <!--  ===================================================  -->
+	<!--  		Minimum and maximum SDK version support        -->  
+	<!--  ==================================================== -->
+	
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+    
+    <!--  ===================================================  -->
+	<!--  User permission required for TangoTab application    -->  
+	<!--  ==================================================== -->
+	
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   	<uses-permission android:name="android.permission.VIBRATE" />
+   	<uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />	
+ 
+    <!--  ===================================================  -->
+	<!-- 	 Screen resolution for TangoTab application   	   -->  
+	<!--  ==================================================== -->   
+	 
+    <supports-screens android:smallScreens="true" 
+        android:normalScreens="true"
+        android:largeScreens="true"/>
+    
+    <!--  ===================================================  -->
+	<!-- 		 Activities for TangoTab application           -->  
+	<!--  ==================================================== -->   
+    <application
+        android:name="com.tangotab.core.session.TangoTabBaseApplication"
+        android:icon="@drawable/tangotab_icon"
+        android:label="@string/app_name" >
+         <uses-library android:name="com.google.android.maps" />
+         
+         
+         <!--  ================================= -->
+		 <!--       	 Splash screen           -->  
+		 <!--  ================================= --> 
+        <activity
+            android:name=".login.activity.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <!--  ================================= -->
+		 <!--      		 Login screen            -->  
+		 <!--  ================================= --> 
+		 
+         <activity
+            android:name=".login.activity.LogInActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+         <!--  ================================= -->
+		 <!--     	Forget password screen       -->  
+		 <!--  ================================= --> 
+		 
+         <activity
+            android:name=".login.activity.ForgetPasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =============================== -->
+		<!--     		SignUp screen 	     -->  
+		<!--  ============================== -->
+		 
+        <activity
+            android:name=".signUp.activity.SignUpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        
+         <!-- =================================== -->
+		 <!--     	Terms of Use screen 	      -->  
+		 <!--  =================================  -->
+		
+        <activity
+            android:name=".signUp.activity.TermsOfUseActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--     		Privacy policy screen 	 -->  
+		<!--  ================================== -->
+		 
+        <activity
+            android:name=".signUp.activity.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--     		Near me screen 			 -->  
+		<!--  =================================  -->
+		 
+         <activity
+            android:name=".nearMe.activity.NearMeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--     	Claim Offer screen 			 -->  
+		<!--  ================================= -->
+		 
+        <activity
+            android:name=".claimOffer.activity.ClaimOfferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--     		My Offers screen 		 -->  
+		<!--  ================================== -->
+		 
+         <activity
+            android:name=".myOffers.activity.MyOffersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--     		Search screen 		     -->  
+		<!--  =================================  -->
+		 
+        <activity
+            android:name=".search.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        
+         <!-- =================================== -->
+		 <!--     			Settings screen 	  -->  
+		 <!--  =================================  -->
+		 
+        <activity
+            android:name=".settings.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--     My Offers Detail screen 		 -->  
+		<!--  ================================== -->
+		 
+         <activity
+            android:name=".myOfferDetails.activity.MyoffersDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--  	 Local Notification screen       -->  
+		<!--  ================================== -->
+		 
+        <activity
+            android:name=".localNotification.activity.LocalNotificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize" 
+             android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--   		App Notification screen      -->  
+		<!--  =================================  -->
+		 
+         <activity
+            android:name=".appNotification.activity.AppNotificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity> 
+        
+         <!-- =================================== -->
+		 <!--  	 	Google Mapping Screen  	      -->  
+		 <!--  =================================  -->
+		 
+        <activity
+            android:name=".map.activity.MappingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity> 
+        
+        <!-- =================================== -->
+		<!--  	 	Map point screen  	         -->  
+		<!--  ================================== -->
+		 
+         <activity
+            android:name=".map.activity.MapPointActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>  
+         
+            <!-- =================================== -->
+			<!--  	 	Local notification Receiver  -->  
+		 	<!--  =================================  -->    
+		    
+         <receiver
+            android:name=".localNotification.receiver.LocalNotificationReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.bytefoundry.broadcast.ALARM" />
+            </intent-filter>
+        </receiver>
+         <activity android:name="com.facebook.LoginActivity"
+         android:label="@string/app_name"/>
+         
+        <!-- =================================== -->
+		<!--  			ZipCode Activity		 -->  
+		<!--  =================================  -->
+		
+        <activity
+            android:name=".facebook.activity.ZipActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--  		FaceBook Login screen		 -->  
+		<!--  =================================  -->
+		  
+        <activity
+            android:name=".facebook.activity.FacebookLogin"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =================================== -->
+		<!--  		My Offers Mapping Screen	 -->  
+		<!--  ================================== -->
+		
+        <activity
+            android:name=".map.activity.MyOffersMapingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- =========================================== -->
+		<!--  		Custom URl Handler Implementation	 -->  
+		<!--  ========================================== -->
+		
+        <activity android:name=".customUrl.activity.CustomUrlActivity" 
+            android:label="@string/app_name" android:screenOrientation="portrait"  android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+
+            <!-- Added for custom url handler for near me -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ttapp" />
+            </intent-filter>
+             
+            <intent-filter>
+                <action android:name="com.commonsware.android.MY_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>       
+        
+    </application>    
+    
+    
+</manifest>

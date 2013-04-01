@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="@drawable/offer_top" >
+
+        <ProgressBar
+            android:id="@+id/progressBarMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menuRL"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:id="@+id/myoffersRL"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:clickable="true" >
+
+            <Button
+                android:id="@+id/myoffersMenuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/mydeals"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/myoffersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/myoffersMenuButton"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:singleLine="true"
+                android:text="My Offers"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nearmeRL"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/myoffersRL"
+            android:clickable="true" >
+
+            <Button
+                android:id="@+id/nearmeMenuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toLeftOf="@id/myoffersMenuButton"
+                android:background="@drawable/places"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/myoffersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nearmeMenuButton"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:singleLine="true"
+                android:text="Near Me"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchRL"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/nearmeRL"
+            android:clickable="true" >
+
+            <Button
+                android:id="@+id/searchMenuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/search"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/myoffersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/searchMenuButton"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:singleLine="true"
+                android:text="Search"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/settingsRL"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/searchRL"
+            android:clickable="true" >
+
+            <Button
+                android:id="@+id/settingsMenuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/settings"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/myoffersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settingsMenuButton"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:singleLine="true"
+                android:text="Settings"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/menuRL"
+        android:layout_below="@id/content" >
+
+        <com.google.android.maps.MapView
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="@string/googleMapsAPIKey"
+            android:clickable="true"
+            android:enabled="true" />
+    </LinearLayout>
+
+</RelativeLayout>

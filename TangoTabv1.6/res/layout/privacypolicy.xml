@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:id="@+id/LinearLayout01"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/privacy_policy_top" >
+		<Button
+			android:id="@+id/Back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="2dp"
+			android:background="@drawable/backclick" />
+	</LinearLayout>
+	<WebView
+		android:id="@+id/webView"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+	<LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/myoffersRL"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/myoffersMenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:background="@drawable/mydeals" />
+
+                <TextView
+                    android:id="@+id/myoffersText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/myoffersMenuButton"
+                    android:layout_marginLeft="2dp"
+                    android:singleLine="true"
+                    android:text="My Offers"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nearmeRL"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_toRightOf="@id/myoffersRL">
+
+                <Button
+                    android:id="@+id/nearmeMenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_toLeftOf="@id/myoffersMenuButton"
+                    android:background="@drawable/places" />
+
+                <TextView
+                    android:id="@+id/myoffersText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nearmeMenuButton"
+                    android:layout_marginLeft="2dp"
+                    android:singleLine="true"
+                    android:text="Near Me"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/searchRL"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_toRightOf="@id/nearmeRL">
+
+                <Button
+                    android:id="@+id/searchMenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/search" />
+                
+                <TextView
+                    android:id="@+id/myoffersText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/searchMenuButton"
+                    android:layout_marginLeft="2dp"
+                    android:singleLine="true"
+                    android:text="Search"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settingsRL"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_toRightOf="@id/searchRL">
+
+                <Button
+                    android:id="@+id/settingsMenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/settings" />
+                
+                <TextView
+                    android:id="@+id/myoffersText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settingsMenuButton"
+                    android:layout_marginLeft="2dp"
+                    android:singleLine="true"
+                    android:text="Settings"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
